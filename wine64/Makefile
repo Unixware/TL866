@@ -39,7 +39,7 @@ DLL_LIBS        := -lws2_32 -lshlwapi -lgdi32 -luxtheme
 LAUNCHER        := launcher.exe
 LAUNCHER_SRCS   := launcher.c
 LAUNCHER_OBJS   := $(LAUNCHER_SRCS:.c=.o)
-LAUNCHER_CFLAGS := -O2 -s -DWIN32 -D_WIN32_WINNT=0x0601 -Wall -Wextra
+LAUNCHER_CFLAGS := -O2 -s -DWIN32 -D_WIN32_WINNT=0x0601 -D__USE_MINGW_ANSI_STDIO -Wall -Wextra
 LAUNCHER_LDFLAGS:= -municode -mconsole
 LAUNCHER_LIBS   := -lshlwapi
 
